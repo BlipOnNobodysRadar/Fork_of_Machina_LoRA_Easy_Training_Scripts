@@ -114,7 +114,7 @@ class FluxWidget(BaseWidget):
         for arg in ["sigmoid_scale", "discrete_flow_shift"]:
             if arg in self.args:
                 del self.args[arg]
-        self.edit_args("timestep_sampling", self.widget.timestep_sampling_selector.currentText().lower())
+        self.edit_args("timestep_sampling", self.widget.timestep_sampling_selector.currentText().replace(" ", "_").lower())
         self.edit_args(
             "sigmoid_scale",
             self.widget.sigmoid_scale_input.value() if self.widget.sigmoid_scale_input.isEnabled() else False,
