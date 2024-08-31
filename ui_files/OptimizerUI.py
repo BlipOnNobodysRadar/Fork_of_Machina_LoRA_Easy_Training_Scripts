@@ -146,6 +146,8 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
+        self.optimizer_type_selector.addItem("")
+        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -402,6 +404,8 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(9, QCoreApplication.translate("optimizer_ui", u"AdaFactor", None))
         self.optimizer_type_selector.setItemText(10, QCoreApplication.translate("optimizer_ui", u"Prodigy", None))
         self.optimizer_type_selector.setItemText(11, QCoreApplication.translate("optimizer_ui", u"Came", None))
+        self.optimizer_type_selector.setItemText(12, QCoreApplication.translate("optimizer_ui", u"AdamWScheduleFree", None))
+        self.optimizer_type_selector.setItemText(13, QCoreApplication.translate("optimizer_ui", u"SGDNesterovScheduleFree", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
