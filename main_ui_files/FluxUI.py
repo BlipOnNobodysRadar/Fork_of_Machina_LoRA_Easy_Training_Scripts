@@ -109,7 +109,7 @@ class FluxWidget(BaseWidget):
         self.edit_args("split_mode", checked, True)
 
     def change_timestep_sampling_type(self, index: int) -> None:
-        self.widget.sigmoid_scale_input.setEnabled(index == 0)
+        self.widget.sigmoid_scale_input.setEnabled(index == 0 or index == 3 or index == 4)
         self.widget.discrete_flow_shift_input.setEnabled(index == 3)
         for arg in ["sigmoid_scale", "discrete_flow_shift"]:
             if arg in self.args:
