@@ -107,6 +107,20 @@ class Ui_network_ui(object):
 
         self.formLayout_4.setWidget(4, QFormLayout.SpanningRole, self.lora_fa_enable)
 
+        self.train_blocks_label = QLabel(self.main_tab)
+        self.train_blocks_label.setObjectName(u"train_blocks_label")
+        self.train_blocks_label.setEnabled(True)
+
+        self.formLayout_4.setWidget(5, QFormLayout.LabelRole, self.train_blocks_label)
+
+        self.train_blocks_selector = ComboBox(self.main_tab)
+        self.train_blocks_selector.addItem("")
+        self.train_blocks_selector.addItem("")
+        self.train_blocks_selector.addItem("")
+        self.train_blocks_selector.setObjectName(u"train_blocks_selector")
+
+        self.formLayout_4.setWidget(6, QFormLayout.SpanningRole, self.train_blocks_selector)
+
         self.ip_gamma_enable = QCheckBox(self.main_tab)
         self.ip_gamma_enable.setObjectName(u"ip_gamma_enable")
 
@@ -451,6 +465,13 @@ class Ui_network_ui(object):
         self.lora_fa_enable.setToolTip(QCoreApplication.translate("network_ui", u"<html><head/><body><p>LoRA FA is a tweak to the LoRA algorithm that is supposed to reduce the VRAM requirement while keeping all else the same</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
         self.lora_fa_enable.setText(QCoreApplication.translate("network_ui", u"LoRA FA", None))
+#if QT_CONFIG(tooltip)
+        self.train_blocks_label.setToolTip(QCoreApplication.translate("network_ui", u"<html><head/><body><p>Select blocks to train</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.train_blocks_label.setText(QCoreApplication.translate("network_ui", u"Train on", None))
+        self.train_blocks_selector.setItemText(0, QCoreApplication.translate("network_ui", u"All", None))
+        self.train_blocks_selector.setItemText(1, QCoreApplication.translate("network_ui", u"Single", None))
+        self.train_blocks_selector.setItemText(2, QCoreApplication.translate("network_ui", u"Double", None))
 #if QT_CONFIG(tooltip)
         self.ip_gamma_enable.setToolTip(QCoreApplication.translate("network_ui", u"<html><head/><body><p>IP Noise Gamma is a noise modification that reduces the random noise, allowing what you want to learn, to learn faster</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)

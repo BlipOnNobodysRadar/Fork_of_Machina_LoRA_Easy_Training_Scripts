@@ -116,6 +116,10 @@ class NetworkWidget(BaseWidget):
             lambda x: self.edit_network_args("constraint", self.parse_float(x), True)
         )
         self.widget.lora_fa_enable.clicked.connect(lambda x: self.edit_args("fa", x, True))
+        
+        self.widget.train_blocks_selector.currentTextChanged.connect(
+            lambda x: self.edit_network_args("train_blocks", x.lower())
+        )
 
     def edit_network_args(self, name: str, value: object, optional: bool = False) -> None:
         if "network_args" not in self.args:
@@ -407,6 +411,7 @@ class NetworkWidget(BaseWidget):
         self.widget.constrain_enable.setChecked(bool(network_args.get("constraint", False)))
         self.widget.constrain_input.setText(str(network_args.get("constraint", "")))
         self.widget.lora_fa_enable.setEnabled(args.get("fa", False))
+        self.widget.train_blocks_selector.setCurrentText(str(network_args.get("train_blocks", "")))
 
         # update block widgets
         self.load_block_weights(network_args)

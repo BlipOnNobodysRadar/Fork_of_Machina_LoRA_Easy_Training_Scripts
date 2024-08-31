@@ -187,6 +187,38 @@
            </property>
           </widget>
          </item>
+          <item row="5" column="0" colspan="1">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Train blocks</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="1">
+           <widget class="ComboBox" name="train_blocks_selector">
+              <property name="sizePolicy3">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+            <item>
+             <property name="text">
+              <string>All</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Single</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Double</string>
+             </property>
+            </item>
+           </widget>
+          </item>
          <item row="3" column="0">
           <widget class="QCheckBox" name="ip_gamma_enable">
            <property name="toolTip">
