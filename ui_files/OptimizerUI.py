@@ -151,7 +151,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
-        #self.optimizer_type_selector.addItem("")
+        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -428,7 +428,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(14, QCoreApplication.translate("optimizer_ui", u"RMSProp", None))
         self.optimizer_type_selector.setItemText(15, QCoreApplication.translate("optimizer_ui", u"AdamWScheduleFree", None))
         self.optimizer_type_selector.setItemText(16, QCoreApplication.translate("optimizer_ui", u"SGDNesterovScheduleFree", None))
-        #self.optimizer_type_selector.setItemText(17, QCoreApplication.translate("optimizer_ui", u"Shampoo", None))
+        self.optimizer_type_selector.setItemText(17, QCoreApplication.translate("optimizer_ui", u"ScalableShampoo", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))

@@ -336,11 +336,11 @@
              <string>SGDNesterovScheduleFree</string>
             </property>
            </item>
-           <!--<item>
+           <item>
             <property name="text">
-             <string>Shampoo</string>
+             <string>ScalableShampoo</string>
             </property>
-           </item>-->
+           </item>
           </widget>
          </item>
          <item row="1" column="0">
