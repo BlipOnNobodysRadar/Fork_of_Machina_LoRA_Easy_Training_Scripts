@@ -192,6 +192,9 @@
            <property name="value">
             <number>5</number>
            </property>
+           <property name="maximum">
+            <double>2048</double>
+           </property>
           </widget>
          </item>
          <item row="6" column="1">

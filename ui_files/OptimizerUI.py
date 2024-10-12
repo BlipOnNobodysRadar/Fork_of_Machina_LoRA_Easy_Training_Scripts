@@ -106,6 +106,7 @@ class Ui_optimizer_ui(object):
         self.min_snr_input.setEnabled(False)
         self.min_snr_input.setFocusPolicy(Qt.StrongFocus)
         self.min_snr_input.setValue(5)
+        self.min_snr_input.setMaximum(2048)
 
         self.formLayout_2.setWidget(5, QFormLayout.FieldRole, self.min_snr_input)
 
