@@ -379,6 +379,11 @@
              <string>CAMEFullSR</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>Compass8Bit</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item row="1" column="0">
