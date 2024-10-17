@@ -161,7 +161,6 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
-        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -446,8 +445,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(22, QCoreApplication.translate("optimizer_ui", u"FishMonger8Bit", None))
         self.optimizer_type_selector.setItemText(23, QCoreApplication.translate("optimizer_ui", u"FARMSCrop", None))
         self.optimizer_type_selector.setItemText(24, QCoreApplication.translate("optimizer_ui", u"CAMEFullSR", None))
-        self.optimizer_type_selector.setItemText(25, QCoreApplication.translate("optimizer_ui", u"Compass8Bit", None))
-        self.optimizer_type_selector.setItemText(26, QCoreApplication.translate("optimizer_ui", u"Compass8BitBNB", None))
+        self.optimizer_type_selector.setItemText(25, QCoreApplication.translate("optimizer_ui", u"Compass8BitBNB", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
