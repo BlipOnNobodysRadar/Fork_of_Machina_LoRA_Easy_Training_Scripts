@@ -442,7 +442,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(19, QCoreApplication.translate("optimizer_ui", u"AdEMAMix", None))
         self.optimizer_type_selector.setItemText(20, QCoreApplication.translate("optimizer_ui", u"FCompass", None))
         self.optimizer_type_selector.setItemText(21, QCoreApplication.translate("optimizer_ui", u"FishMonger", None))
-        self.optimizer_type_selector.setItemText(22, QCoreApplication.translate("optimizer_ui", u"FishMonger8Bit", None))
+        self.optimizer_type_selector.setItemText(22, QCoreApplication.translate("optimizer_ui", u"FishMonger8BitBNB", None))
         self.optimizer_type_selector.setItemText(23, QCoreApplication.translate("optimizer_ui", u"FARMSCrop", None))
         self.optimizer_type_selector.setItemText(24, QCoreApplication.translate("optimizer_ui", u"CAMEFullSR", None))
         self.optimizer_type_selector.setItemText(25, QCoreApplication.translate("optimizer_ui", u"Compass8BitBNB", None))
