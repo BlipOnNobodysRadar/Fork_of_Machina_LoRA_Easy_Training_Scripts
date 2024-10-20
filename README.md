@@ -1,5 +1,5 @@
 # Enhancements over original
-- Triton is installed for Windows and Linux, which can provide an improvement to training speed.
+- Triton is installed for Windows and Linux, which can provide an improvement to training speed. Make sure to follow the steps at https://github.com/woct0rdho/triton-windows?tab=readme-ov-file#install-from-wheel for Windows.
 - All safe to update dependencies in sd_scripts have been updated to their latest versions.
 - A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, etc.)
 - Enhanced versions of optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
