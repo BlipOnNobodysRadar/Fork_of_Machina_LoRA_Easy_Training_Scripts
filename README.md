@@ -1,3 +1,14 @@
+Enhancements over original
+- Triton is installed for Windows and Linux, which can provide an improvement to training speed.
+- All safe to update dependencies in sd_scripts have been updated to their latest versions.
+- A wide array of additional optimizers.
+- Enhanced versions of optimizers with additional features made available and with stochastic rounding implemented.
+- Validation loss for SD and Flux loras, and SDXL finetune.
+- Options to scale IP noise gamma based on timestep or apply to last channel only.
+- Fixed logging of max and average key norms when using lycoris
+- IP Noise gamma for Flux networks/loras
+
+
 # LoRA_Easy_Training_Scripts
 
 A set of training scripts written in python for use in Kohya's [SD-Scripts](https://github.com/kohya-ss/sd-scripts). It has a UI written in pyside6 to help streamline the process of training models.
