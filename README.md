@@ -1,4 +1,4 @@
-Enhancements over original
+# Enhancements over original
 - Triton is installed for Windows and Linux, which can provide an improvement to training speed.
 - All safe to update dependencies in sd_scripts have been updated to their latest versions.
 - A wide array of additional optimizers.
