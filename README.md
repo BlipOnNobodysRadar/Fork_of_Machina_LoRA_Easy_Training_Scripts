@@ -1,8 +1,8 @@
 # Enhancements over original
 - Triton is installed for Windows and Linux, which can provide an improvement to training speed.
 - All safe to update dependencies in sd_scripts have been updated to their latest versions.
-- A wide array of additional optimizers.
-- Enhanced versions of optimizers with additional features made available and with stochastic rounding implemented.
+- A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, etc.)
+- Enhanced versions of optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
 - Validation loss for SD and Flux loras, and SDXL finetune.
 - Options to scale IP noise gamma based on timestep or apply to last channel only.
 - Fixed logging of max and average key norms when using lycoris
