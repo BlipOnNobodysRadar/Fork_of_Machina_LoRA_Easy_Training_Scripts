@@ -449,6 +449,11 @@
              <string>rex annealing warm restarts (RAWR)</string>
             </property>
            </item>
+           <item>
+            <property name="text">
+             <string>Warmup Stable Decay</string>
+            </property>
+           </item>
           </widget>
          </item>
          <item row="2" column="0">

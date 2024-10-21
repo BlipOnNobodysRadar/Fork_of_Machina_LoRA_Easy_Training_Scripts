@@ -181,6 +181,7 @@ class Ui_optimizer_ui(object):
         self.lr_scheduler_selector.addItem("")
         self.lr_scheduler_selector.addItem("")
         self.lr_scheduler_selector.addItem("")
+        self.lr_scheduler_selector.addItem("")
         self.lr_scheduler_selector.setObjectName(u"lr_scheduler_selector")
         self.lr_scheduler_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -463,6 +464,7 @@ class Ui_optimizer_ui(object):
         self.lr_scheduler_selector.setItemText(6, QCoreApplication.translate("optimizer_ui", u"adafactor", None))
         self.lr_scheduler_selector.setItemText(7, QCoreApplication.translate("optimizer_ui", u"polynomial", None))
         self.lr_scheduler_selector.setItemText(8, QCoreApplication.translate("optimizer_ui", u"rex annealing warm restarts (RAWR)", None))
+        self.lr_scheduler_selector.setItemText(9, QCoreApplication.translate("optimizer_ui", u"Warmup Stable Decay", None))
 
 #if QT_CONFIG(tooltip)
         self.lr_scheduler_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>LR Scheduler is the Scheduler for the learning rate during the training</p></body></html>", None))
