@@ -190,6 +190,13 @@ class OptimizerWidget(BaseWidget):
         elif value == "polynomial":
             self.widget.poly_power_input.setEnabled(True)
             self.edit_args("lr_scheduler_power", self.widget.poly_power_input.value(), True)
+        elif value in {"warmup_stable_decay", "wsd"}:
+            self.widget.cosine_restart_input.setEnabled(True)
+            self.edit_args(
+                "lr_scheduler_num_cycles",
+                self.widget.cosine_restart_input.value(),
+                True,
+            )
         self.edit_args("lr_scheduler", value)
 
     def change_loss_type(self, value: str) -> None:

@@ -451,7 +451,7 @@
            </item>
            <item>
             <property name="text">
-             <string>Warmup Stable Decay</string>
+             <string>warmup stable Decay</string>
             </property>
            </item>
           </widget>
