@@ -298,7 +298,7 @@ class OptimizerWidget(BaseWidget):
         self.widget.scale_weight_input.setValue(args.get("scale_weight_norms", 1.0))
         self.widget.max_grad_norm_input.setValue(args.get("max_grad_norm", 1.0))
         self.widget.min_snr_enable.setChecked(bool(args.get("min_snr_gamma", False)))
-        self.widget.min_snr_input.setValue(args.get("min_snr_gamma", 5))
+        self.widget.min_snr_input.setValue(args.get("min_snr_gamma", 5.0))
         self.widget.zero_term_enable.setChecked(args.get("zero_terminal_snr", False))
         self.widget.huber_schedule_selector.setCurrentIndex(
             {"snr": 0, "exponential": 1, "constant": 2}.get(args.get("huber_schedule", "snr").lower(), 0)

@@ -101,11 +101,11 @@ class Ui_optimizer_ui(object):
 
         self.formLayout_2.setWidget(5, QFormLayout.LabelRole, self.min_snr_enable)
 
-        self.min_snr_input = SpinBox(self.optimizer_tab_main)
+        self.min_snr_input = DoubleSpinBox(self.optimizer_tab_main)
         self.min_snr_input.setObjectName(u"min_snr_input")
         self.min_snr_input.setEnabled(False)
         self.min_snr_input.setFocusPolicy(Qt.StrongFocus)
-        self.min_snr_input.setValue(5)
+        self.min_snr_input.setValue(5.0)
         self.min_snr_input.setMaximum(2048)
 
         self.formLayout_2.setWidget(5, QFormLayout.FieldRole, self.min_snr_input)
