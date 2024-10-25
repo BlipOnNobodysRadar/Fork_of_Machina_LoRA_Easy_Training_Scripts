@@ -1,7 +1,8 @@
 # Enhancements over original
 - Triton is installed for Windows and Linux, which can provide an improvement to training speed. Make sure to follow the steps at https://github.com/woct0rdho/triton-windows?tab=readme-ov-file#install-from-wheel for Windows.
 - All safe to update dependencies in sd_scripts have been updated to their latest versions.
-- A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, etc.)
+- A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, Ranger21, etc.)
+- An experimental version of Compass (aptly called CompassExperimental at this time) that incorporates a number of the features of Ranger21, currently lacks positive + negative momentum, and did not implement scheduling into the optimizer itself as can be done via WSD LR scheduler.
 - Enhanced versions of optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
 - Validation loss for SD and Flux loras, and SDXL finetune.
 - Options to scale IP noise gamma based on timestep or apply to last channel only.
