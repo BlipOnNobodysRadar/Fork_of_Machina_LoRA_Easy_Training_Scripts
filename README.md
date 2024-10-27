@@ -4,6 +4,7 @@
 - A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, Ranger21, AdEMAMix etc.)
 - A version of Compass called CompassPlus that incorporates many of the features of Ranger21.
 - Enhanced versions of some optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
+- See https://github.com/67372a/LoRA_Easy_Training_scripts_Backend/tree/flux/custom_scheduler/LoraEasyCustomOptimizer for added / modified optimizers.
 - Validation loss for SD and Flux loras, and SDXL finetune.
   - Use the following args under Extra Args to manage
   - validation_split - float 0.0 - 1.0: The percentage amount of all training datasets to split off for validation. Recommend a value of at least 0.1
