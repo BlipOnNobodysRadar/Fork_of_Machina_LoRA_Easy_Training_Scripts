@@ -17,7 +17,6 @@
   - ip_noise_gamma_scaling_exponent - float - Exponent for exponential scaling, default is 2.0.
   - ip_noise_gamma_scaling_min - The minimum of ip noise gamma to apply regardless of scaling. Recommend not using, or using a lower value than the primary value.
   - ip_noise_gamma_last_channel_only - Applies IP noise gamma to the last channel (think VAE) of the latent
-- ip_noise_gamma_scaling - linear, exponential 
 - Fixed logging of max and average key norms when using lycoris
 - IP Noise gamma for Flux networks/loras
 - Warmup Stable Decay (WSD) scheduler, by default decay phase will match number of warmup steps, else use Extra Args and set lr_decay_steps to either a decimal (for percent of total steps) or number (for absolute steps) for decay.
