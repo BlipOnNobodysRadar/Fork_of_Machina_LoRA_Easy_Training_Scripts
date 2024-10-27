@@ -1,13 +1,25 @@
 # Enhancements over original
-- Triton is installed for Windows and Linux, which can provide an improvement to training speed. Make sure to follow the steps at https://github.com/woct0rdho/triton-windows?tab=readme-ov-file#install-from-wheel for Windows.
+- Triton is installed for Windows and Linux, which can provide an improvement to training speed. Make sure to follow the steps at https://github.com/woct0rdho/triton-windows?tab=readme-ov-file#install-from-wheel for Windows. Linux also requires 12.X CUDA be installed and properly setup on the paths required as per the Nvidia documentation.
 - All safe to update dependencies in sd_scripts have been updated to their latest versions.
-- A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, Ranger21, etc.)
-- An experimental version of Compass (aptly called CompassExperimental at this time) that incorporates a number of the features of Ranger21, currently lacks positive + negative momentum, and did not implement scheduling into the optimizer itself as can be done via WSD LR scheduler.
-- Enhanced versions of optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
+- A wide array of additional optimizers. (e.x. Compass, FCompass, FishMonger, FARMScrop, Ranger21, AdEMAMix etc.)
+- A version of Compass called CompassPlus that incorporates many of the features of Ranger21.
+- Enhanced versions of some optimizers with additional features made available (e.x. centralization and gradient clipping) and with stochastic rounding implemented.
 - Validation loss for SD and Flux loras, and SDXL finetune.
+  - Use the following args under Extra Args to manage
+  - validation_split - float 0.0 - 1.0: The percentage amount of all training datasets to split off for validation. Recommend a value of at least 0.1
+  - validation_seed - string - A seed that used by the process to determine the images split off, order, etc. 
+  - validation_every_n_step - int - Every n steps, run validation, if not set, runs every epoch. Recommend a value of 25, depending on your effective batch size and number of steps.
+  - max_validation_steps - int - The maximum number of batches of images that will be processed during a validation, recommend setting this to a high value and not worrying about it, so all images in the val dataset are processed each time.
 - Options to scale IP noise gamma based on timestep or apply to last channel only.
+  - Use the following args under Extra Args to manage
+  - ip_noise_gamma_scaling - string(sine, linear, exponential) - The scaling, starting from timestep zero, of ip noise gamma. Recommend exponential or linear based on testing and validation loss.
+  - ip_noise_gamma_scaling_exponent - float - Exponent for exponential scaling, default is 2.0.
+  - ip_noise_gamma_scaling_min - The minimum of ip noise gamma to apply regardless of scaling. Recommend not using, or using a lower value than the primary value.
+  - ip_noise_gamma_last_channel_only - Applies IP noise gamma to the last channel (think VAE) of the latent
+- ip_noise_gamma_scaling - linear, exponential 
 - Fixed logging of max and average key norms when using lycoris
 - IP Noise gamma for Flux networks/loras
+- Warmup Stable Decay (WSD) scheduler, by default decay phase will match number of warmup steps, else use Extra Args and set lr_decay_steps to either a decimal (for percent of total steps) or number (for absolute steps) for decay.
 
 
 # LoRA_Easy_Training_Scripts
