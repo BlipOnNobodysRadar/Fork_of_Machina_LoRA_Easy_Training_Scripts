@@ -168,7 +168,6 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
-        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -461,8 +460,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(29, QCoreApplication.translate("optimizer_ui", u"Lamb", None))
         self.optimizer_type_selector.setItemText(30, QCoreApplication.translate("optimizer_ui", u"Adan", None))
         self.optimizer_type_selector.setItemText(31, QCoreApplication.translate("optimizer_ui", u"SAM", None))
-        self.optimizer_type_selector.setItemText(32, QCoreApplication.translate("optimizer_ui", u"BSAM", None))
-        self.optimizer_type_selector.setItemText(33, QCoreApplication.translate("optimizer_ui", u"ADOPT", None))
+        self.optimizer_type_selector.setItemText(32, QCoreApplication.translate("optimizer_ui", u"ADOPT", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
