@@ -85,6 +85,11 @@ class Ui_sub_dataset_input(object):
 
         self.gridLayout_2.addWidget(self.regularization_images_enable, 2, 0, 1, 2, Qt.AlignLeft)
 
+        self.validation_images_enable = QCheckBox(sub_dataset_input)
+        self.validation_images_enable.setObjectName(u"validation_images_enable")
+
+        self.gridLayout_2.addWidget(self.validation_images_enable, 2, 1, 1, 2, Qt.AlignLeft)
+
 
         self.gridLayout.addLayout(self.gridLayout_2, 2, 1, 1, 1)
 
@@ -198,7 +203,11 @@ class Ui_sub_dataset_input(object):
 #if QT_CONFIG(tooltip)
         self.regularization_images_enable.setToolTip(QCoreApplication.translate("sub_dataset_input", u"<html><head/><body><p>Regularization Images denotes that this folder is meant to be regularization, not for direct training</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
-        self.regularization_images_enable.setText(QCoreApplication.translate("sub_dataset_input", u"regularization images", None))
+        self.regularization_images_enable.setText(QCoreApplication.translate("sub_dataset_input", u"reg images", None))
+#if QT_CONFIG(tooltip)
+        self.validation_images_enable.setToolTip(QCoreApplication.translate("sub_dataset_input", u"<html><head/><body><p>Validation Images denotes that this folder is meant to be validation, not for direct training</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.validation_images_enable.setText(QCoreApplication.translate("sub_dataset_input", u"val images", None))
 #if QT_CONFIG(tooltip)
         self.repeats_label.setToolTip(QCoreApplication.translate("sub_dataset_input", u"<html><head/><body><p>Number of Repeats is the number of times any given image in the folder will be repeated per epoch</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)

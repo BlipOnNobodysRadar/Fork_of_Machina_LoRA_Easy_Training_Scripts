@@ -93,6 +93,9 @@ class SubsetWidget(BaseWidget):
         self.widget.regularization_images_enable.clicked.connect(
             lambda x: self.edit_dataset_args("is_reg", x, True)
         )
+        self.widget.validation_images_enable.clicked.connect(
+            lambda x: self.edit_dataset_args("is_val", x, True)
+        )
         self.extra_widget.face_crop_group.clicked.connect(self.enable_disable_face_crop)
         self.extra_widget.face_crop_width_input.valueChanged.connect(
             lambda: self.enable_disable_face_crop(True)
@@ -268,6 +271,9 @@ class SubsetWidget(BaseWidget):
         self.widget.regularization_images_enable.setChecked(
             dataset_args.get("is_reg", False)
         )
+        self.widget.validation_images_enable.setChecked(
+            dataset_args.get("is_val", False)
+        )
         self.extra_widget.face_crop_group.setChecked(
             bool(dataset_args.get("face_crop_aug_range", False))
         )
@@ -334,6 +340,9 @@ class SubsetWidget(BaseWidget):
         )
         self.edit_dataset_args(
             "is_reg", self.widget.regularization_images_enable.isChecked(), True
+        )
+        self.edit_dataset_args(
+            "is_val", self.widget.validation_images_enable.isChecked(), True
         )
         self.enable_disable_face_crop(self.extra_widget.face_crop_group.isChecked())
         self.enable_disable_caption_dropout(
