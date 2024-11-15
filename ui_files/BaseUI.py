@@ -73,6 +73,20 @@ class Ui_base_args_ui(object):
 
         self.formLayout_6.setWidget(2, QFormLayout.FieldRole, self.loss_weight_input)
 
+        self.max_data_loader_n_workers_label = QLabel(base_args_ui)
+        self.max_data_loader_n_workers_label.setObjectName(u"max_data_loader_n_workers_label")
+
+        self.formLayout_6.setWidget(5, QFormLayout.LabelRole, self.max_data_loader_n_workers_label)
+
+        self.max_data_loader_n_workers_input = SpinBox(base_args_ui)
+        self.max_data_loader_n_workers_input.setObjectName(u"max_data_loader_n_workers_input")
+        self.max_data_loader_n_workers_input.setFocusPolicy(Qt.StrongFocus)
+        self.max_data_loader_n_workers_input.setMinimum(1)
+        self.max_data_loader_n_workers_input.setMaximum(64)
+        self.max_data_loader_n_workers_input.setValue(1)
+
+        self.formLayout_6.setWidget(5, QFormLayout.FieldRole, self.max_data_loader_n_workers_input)
+
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.cache_latents_enable = QCheckBox(base_args_ui)
@@ -401,6 +415,10 @@ class Ui_base_args_ui(object):
         self.label_7.setText(QCoreApplication.translate("base_args_ui", u"Seed", None))
 #if QT_CONFIG(tooltip)
         self.seed_input.setToolTip(QCoreApplication.translate("base_args_ui", u"<html><head/><body><p>The random seed that is used to do all randomization within the training process.</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.max_data_loader_n_workers_label.setText(QCoreApplication.translate("base_args_ui", u"Max Data Loader Workers", None))
+#if QT_CONFIG(tooltip)
+        self.max_data_loader_n_workers_input.setToolTip(QCoreApplication.translate("base_args_ui", u"<html><head/><body><p>The number of dataloaders to use. Set to less then or equal to number of CPU cores.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
 #if QT_CONFIG(tooltip)
         self.label_9.setToolTip(QCoreApplication.translate("base_args_ui", u"<html><head/><body><p>The number of layers to skip while training. Generally, for SD1.X models, clip skip is either set to 1 or 2. SDXL doesn't need clip skip, however</p></body></html>", None))
