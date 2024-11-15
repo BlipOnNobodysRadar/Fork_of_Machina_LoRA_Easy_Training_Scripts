@@ -76,7 +76,7 @@ class Ui_base_args_ui(object):
         self.max_data_loader_n_workers_label = QLabel(base_args_ui)
         self.max_data_loader_n_workers_label.setObjectName(u"max_data_loader_n_workers_label")
 
-        self.formLayout_6.setWidget(5, QFormLayout.LabelRole, self.max_data_loader_n_workers_label)
+        self.formLayout_6.setWidget(3, QFormLayout.LabelRole, self.max_data_loader_n_workers_label)
 
         self.max_data_loader_n_workers_input = SpinBox(base_args_ui)
         self.max_data_loader_n_workers_input.setObjectName(u"max_data_loader_n_workers_input")
@@ -85,7 +85,7 @@ class Ui_base_args_ui(object):
         self.max_data_loader_n_workers_input.setMaximum(64)
         self.max_data_loader_n_workers_input.setValue(1)
 
-        self.formLayout_6.setWidget(5, QFormLayout.FieldRole, self.max_data_loader_n_workers_input)
+        self.formLayout_6.setWidget(3, QFormLayout.FieldRole, self.max_data_loader_n_workers_input)
 
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
@@ -101,7 +101,7 @@ class Ui_base_args_ui(object):
         self.horizontalLayout_5.addWidget(self.cache_latents_to_disk_enable)
 
 
-        self.formLayout_6.setLayout(4, QFormLayout.SpanningRole, self.horizontalLayout_5)
+        self.formLayout_6.setLayout(5, QFormLayout.SpanningRole, self.horizontalLayout_5)
 
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
@@ -118,7 +118,7 @@ class Ui_base_args_ui(object):
         self.horizontalLayout_7.addWidget(self.sdpa_enable)
 
 
-        self.formLayout_6.setLayout(3, QFormLayout.SpanningRole, self.horizontalLayout_7)
+        self.formLayout_6.setLayout(4, QFormLayout.SpanningRole, self.horizontalLayout_7)
 
 
         self.gridLayout_3.addLayout(self.formLayout_6, 5, 1, 1, 1)
