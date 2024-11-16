@@ -182,9 +182,35 @@ class Ui_sub_dataset_extra_input(object):
 
         self.formLayout_3.setWidget(1, QFormLayout.FieldRole, self.token_warmup_step_input)
 
-
         self.verticalLayout.addWidget(self.token_warmup_group)
 
+        self.shuffle_caption_group = QGroupBox(sub_dataset_extra_input)
+        self.shuffle_caption_group.setObjectName(u"shuffle_caption_group")
+        self.shuffle_caption_group.setEnabled(True)
+        self.shuffle_caption_group.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.shuffle_caption_group.setCheckable(True)
+        self.shuffle_caption_group.setChecked(True)
+
+        self.captionShuffleFormLayout = QFormLayout(self.shuffle_caption_group)
+        self.captionShuffleFormLayout.setObjectName(u"captionShuffleFormLayout")
+
+        self.shuffle_caption_sigma_label = QLabel(self.shuffle_caption_group)
+        self.shuffle_caption_sigma_label.setObjectName(u"shuffle_caption_sigma_label")
+        self.shuffle_caption_sigma_label.setEnabled(True)
+
+        self.captionShuffleFormLayout.setWidget(0, QFormLayout.LabelRole, self.shuffle_caption_sigma_label)
+
+        self.shuffle_caption_sigma_input = DoubleSpinBox(self.shuffle_caption_group)
+        self.shuffle_caption_sigma_input.setObjectName(u"shuffle_caption_sigma_input")
+        self.shuffle_caption_sigma_input.setEnabled(True)
+        self.shuffle_caption_sigma_input.setFocusPolicy(Qt.StrongFocus)
+        self.shuffle_caption_sigma_input.setMinimum(0.0)
+        self.shuffle_caption_sigma_input.setSingleStep(0.010000000000000)
+        self.shuffle_caption_sigma_input.setDecimals(2)
+
+        self.captionShuffleFormLayout.setWidget(0, QFormLayout.FieldRole, self.shuffle_caption_sigma_input)
+
+        self.verticalLayout.addWidget(self.shuffle_caption_group)
 
         self.retranslateUi(sub_dataset_extra_input)
 
@@ -231,5 +257,10 @@ class Ui_sub_dataset_extra_input(object):
 #if QT_CONFIG(tooltip)
         self.token_warmup_step_input.setToolTip(QCoreApplication.translate("sub_dataset_extra_input", u"<html><head/><body><p>The highest step before the warmup is complete. Every step past that uses the full captions.</p></body></html>", None))
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(tooltip)
+        self.shuffle_caption_group.setToolTip(QCoreApplication.translate("sub_dataset_extra_input", u"<html><head/><body><p>Caption Shuffle Modifers</p></body></html>", None))
+#endif // QT_CONFIG(tooltip)
+        self.shuffle_caption_group.setTitle(QCoreApplication.translate("sub_dataset_extra_input", u"Caption Shuffle Modifers", None))
+        self.shuffle_caption_sigma_label.setText(QCoreApplication.translate("sub_dataset_extra_input", u"Sigma", None))
     # retranslateUi
 

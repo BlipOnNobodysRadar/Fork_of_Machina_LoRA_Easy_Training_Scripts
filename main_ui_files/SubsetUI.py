@@ -51,6 +51,7 @@ class SubsetWidget(BaseWidget):
         self.extra_widget.face_crop_group.setChecked(False)
         self.extra_widget.caption_dropout_group.setChecked(False)
         self.extra_widget.token_warmup_group.setChecked(False)
+        self.extra_widget.shuffle_caption_group.setChecked(False)
 
     def setup_connections(self) -> None:
         self.widget.image_folder_input.textChanged.connect(
@@ -114,6 +115,12 @@ class SubsetWidget(BaseWidget):
         )
         self.extra_widget.caption_tag_dropout_input.valueChanged.connect(
             lambda x: self.edit_dataset_args("caption_tag_dropout_rate", x, True)
+        )
+        self.extra_widget.shuffle_caption_group.clicked.connect(
+            self.enable_disable_shuffle_caption_modifers
+        )
+        self.extra_widget.shuffle_caption_sigma_input.valueChanged.connect(
+            lambda x: self.edit_dataset_args("shuffle_caption_sigma", x, True)
         )
         self.extra_widget.token_warmup_group.clicked.connect(
             self.enable_disable_token_warmup
@@ -247,6 +254,17 @@ class SubsetWidget(BaseWidget):
             True,
         )
 
+    def enable_disable_shuffle_caption_modifers(self, checked: bool) -> None:
+        args = ["shuffle_caption_sigma"]
+        for arg in args:
+            if arg in self.dataset_args:
+                del self.dataset_args[arg]
+        if not checked:
+            return
+        self.edit_dataset_args(
+            args[0], self.extra_widget.shuffle_caption_sigma_input.value()
+        )
+
     def load_dataset_args(self, dataset_args: dict) -> bool:
         # update element inputs
         self.widget.image_folder_input.setText(dataset_args.get("image_dir", ""))
@@ -293,6 +311,15 @@ class SubsetWidget(BaseWidget):
                 ]
             )
         )
+
+        self.extra_widget.shuffle_caption_group.setChecked(
+            any(
+                arg in dataset_args
+                for arg in [
+                    "shuffle_caption_sigma",
+                ]
+            )
+        )
         self.extra_widget.caption_dropout_rate_input.setValue(
             dataset_args.get("caption_dropout_rate", 0.0)
         )
@@ -301,6 +328,9 @@ class SubsetWidget(BaseWidget):
         )
         self.extra_widget.caption_tag_dropout_input.setValue(
             dataset_args.get("caption_tag_dropout_rate", 0.0)
+        )
+        self.extra_widget.shuffle_caption_sigma_input.setValue(
+            dataset_args.get("shuffle_caption_sigma", 0.0)
         )
         self.extra_widget.token_warmup_group.setChecked(
             any(
@@ -351,4 +381,8 @@ class SubsetWidget(BaseWidget):
         self.enable_disable_token_warmup(
             self.extra_widget.token_warmup_group.isChecked()
         )
+        self.enable_disable_shuffle_caption_modifers(
+            self.extra_widget.shuffle_caption_group.isChecked()
+        )
+
         self.edited.emit(self.dataset_args, self.name)
