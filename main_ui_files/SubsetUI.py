@@ -330,7 +330,7 @@ class SubsetWidget(BaseWidget):
             dataset_args.get("caption_tag_dropout_rate", 0.0)
         )
         self.extra_widget.shuffle_caption_sigma_input.setValue(
-            dataset_args.get("shuffle_caption_sigma", 0.0)
+            dataset_args.get("shuffle_caption_sigma", 0)
         )
         self.extra_widget.token_warmup_group.setChecked(
             any(

@@ -200,13 +200,13 @@ class Ui_sub_dataset_extra_input(object):
 
         self.captionShuffleFormLayout.setWidget(0, QFormLayout.LabelRole, self.shuffle_caption_sigma_label)
 
-        self.shuffle_caption_sigma_input = DoubleSpinBox(self.shuffle_caption_group)
+        self.shuffle_caption_sigma_input = SpinBox(self.shuffle_caption_group)
         self.shuffle_caption_sigma_input.setObjectName(u"shuffle_caption_sigma_input")
         self.shuffle_caption_sigma_input.setEnabled(True)
         self.shuffle_caption_sigma_input.setFocusPolicy(Qt.StrongFocus)
-        self.shuffle_caption_sigma_input.setMinimum(0.0)
-        self.shuffle_caption_sigma_input.setSingleStep(0.010000000000000)
-        self.shuffle_caption_sigma_input.setDecimals(2)
+        self.shuffle_caption_sigma_input.setMinimum(0)
+        self.shuffle_caption_sigma_input.setMaximum(512)
+        self.shuffle_caption_sigma_input.setSingleStep(1)
 
         self.captionShuffleFormLayout.setWidget(0, QFormLayout.FieldRole, self.shuffle_caption_sigma_input)
 
