@@ -175,6 +175,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
+        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -475,6 +476,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(37, QCoreApplication.translate("optimizer_ui", u"GaLore", None))
         self.optimizer_type_selector.setItemText(38, QCoreApplication.translate("optimizer_ui", u"ScheduleFreeWrapper", None))
         self.optimizer_type_selector.setItemText(39, QCoreApplication.translate("optimizer_ui", u"FARMSCropV2", None))
+        self.optimizer_type_selector.setItemText(40, QCoreApplication.translate("optimizer_ui", u"FMARSCrop", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
