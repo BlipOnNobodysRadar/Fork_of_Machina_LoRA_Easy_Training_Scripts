@@ -490,7 +490,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(44, QCoreApplication.translate("optimizer_ui", u"ADOPTMARSScheduleFree", None))
         self.optimizer_type_selector.setItemText(45, QCoreApplication.translate("optimizer_ui", u"FADOPTMARSScheduleFree", None))
         self.optimizer_type_selector.setItemText(46, QCoreApplication.translate("optimizer_ui", u"CompassADOPT", None))
-        self.optimizer_type_selector.setItemText(47, QCoreApplication.translate("optimizer_ui", u"CompassADOPT", None))
+        self.optimizer_type_selector.setItemText(47, QCoreApplication.translate("optimizer_ui", u"RMSPropADOPT", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
