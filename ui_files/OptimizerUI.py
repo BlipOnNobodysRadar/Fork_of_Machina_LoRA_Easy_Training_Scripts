@@ -185,6 +185,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.addItem("")
+        self.optimizer_type_selector.addItem("")
         self.optimizer_type_selector.setObjectName(u"optimizer_type_selector")
         self.optimizer_type_selector.setFocusPolicy(Qt.StrongFocus)
 
@@ -496,6 +497,7 @@ class Ui_optimizer_ui(object):
         self.optimizer_type_selector.setItemText(47, QCoreApplication.translate("optimizer_ui", u"SGDSaI", None))
         self.optimizer_type_selector.setItemText(48, QCoreApplication.translate("optimizer_ui", u"FCompassADOPT", None))
         self.optimizer_type_selector.setItemText(49, QCoreApplication.translate("optimizer_ui", u"FCompassADOPTMARS", None))
+        self.optimizer_type_selector.setItemText(50, QCoreApplication.translate("optimizer_ui", u"FMARSCropV2ExMachina", None))
 
 #if QT_CONFIG(tooltip)
         self.optimizer_type_selector.setToolTip(QCoreApplication.translate("optimizer_ui", u"<html><head/><body><p>Optimizer Type is the Optimizer that will be used during training</p></body></html>", None))
