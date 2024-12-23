@@ -26,8 +26,6 @@
 
 A set of training scripts written in python for use in Kohya's [SD-Scripts](https://github.com/kohya-ss/sd-scripts). It has a UI written in pyside6 to help streamline the process of training models.
 
-#### Old scripts can be found [here](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/tree/old-scripts)
-
 ## Table of contents
 
 - [Installation](#installation)
@@ -45,7 +43,7 @@ A set of training scripts written in python for use in Kohya's [SD-Scripts](http
 If you are on windows all you need to do to install the scripts is follow these commands. Open up a command line within the folder that you want to install to then type these one line at a time
 
 ```
-git clone https://github.com/derrian-distro/LoRA_Easy_Training_Scripts -b flux
+git clone https://github.com/67372a/LoRA_Easy_Training_Scripts -b flux
 cd LoRA_Easy_Training_Scripts
 install.bat
 ```
@@ -58,16 +56,16 @@ If you are on linux all you need to do to install the scripts is open up a shell
 
 ```
 if you are using python 3.10
-sh -c "$(wget https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/install310.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/install310.sh -O -)"
 
 if you are using python 3.11
-sh -c "$(wget https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/install311.sh -O -)"
+sh -c "$(wget https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/install311.sh -O -)"
 ```
 
 Manual method below for those that want it.
 
 ```
-git clone https://github.com/derrian-distro/LoRA_Easy_Training_Scripts
+git clone https://github.com/67372a/LoRA_Easy_Training_Scripts
 cd LoRA_Easy_Training_Scripts
 git submodule init
 git submodule update
@@ -111,41 +109,41 @@ You can launch the UI using the `run.bat` file if you are on windows, or `run.sh
 
 The UI looks like this:
 
-![Main UI Image](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/main_ui.png)
+![Main UI Image](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/main_ui.png)
 
 and has a bunch of features to it to make using it as easy as I could. So lets start with the basics. The UI is divided into two parts, the "args list" and the "subset list", this replaces the old naming scheme of \<number\>\_\<name\> to try and reduce confusion. The subset list allows you to add and remove subsets to have however many you want!
 
-![Subset manipulation gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/subset_manipulation.gif)
+![Subset manipulation gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/subset_manipulation.gif)
 
 You are also able to collapse and expand the sections of the "args list", so that way you can have open only the section you are working on at the moment.
 
-![Args manipulation gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/args_list_manipulation.gif)
+![Args manipulation gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/args_list_manipulation.gif)
 
 Block Weight training is possible through setting the weights, dims, and alpha in the network args.
 
-![Block weight gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/block_weight.gif)
+![Block weight gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/block_weight.gif)
 
 Pretty much every file selector has two ways to add a file without having to type it all in, a proper file dialog, and a way to drag and drop the value in!
 
-![File select or dialog gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/file_selector.gif)
+![File select or dialog gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/file_selector.gif)
 
 TOML saving and loading are available so that you don't have to put in every variable every time you launch the program. All you need to do is either use the menu on the top right, or the keybind listed.
 
-![TOML saving and loading gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/toml_loading_and_saving.gif)
+![TOML saving and loading gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/toml_loading_and_saving.gif)
 NOTE: This change is entirely different from the old system, so unfortunately the JSON files of the old scripts are no longer valid.
 
 I have added a custom scheduler, CosineAnnealingWarmupRestarts. This scheduler allows restarts which restart with a decay, so that each restart has a bit less lr than the last, A few things to note about it though, warmup steps are not all applied at the beginning, but rather per epoch, I have set it up so that the warmup steps get divided evenly among them, decay is settable, and it uniquely has a minimum lr, which is set to 0 instead if the lr provided is smaller.
 
 The Queue System is intuitive and easy to use, allowing you to save a config into a little button on the bottom left then allowing you to pull it back up for editing if you need to. Additionally you can use the arrow keys to change the positions of the queue items. A cool thing about this is that you can still edit args and even add or remove queue items while something else is training.
 
-![queue manipulation gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/queue_manipulation.gif)
+![queue manipulation gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/queue_manipulation.gif)
 
 And finally, we have the ability to switch themes. These themes are only possible because of the great repo that adds in some material design and the ability to apply them on the fly called [qt-material](https://github.com/UN-GCPDS/qt-material), give them a look as the work they've done is amazing.
 
-![theme switching gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/theme_changing.gif)
+![theme switching gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/theme_changing.gif)
 The themes also save between boots
 
-![theme remembering gif](https://raw.githubusercontent.com/derrian-distro/LoRA_Easy_Training_Scripts/main/images_gifs/remember_theme_on_reload.gif)
+![theme remembering gif](https://raw.githubusercontent.com/67372a/LoRA_Easy_Training_Scripts/main/images_gifs/remember_theme_on_reload.gif)
 
 ## Configuration
 
@@ -219,8 +217,6 @@ betas = "0.9,0.99"
 As you can see everything is sectioned off into their own sections. Generally they are seperated into two groups, args, and dataset_args, this is because of the nature of the config and dataset_confg files within sd-scripts. Generally speaking, the only section that you might want to edit that doesn't correspond to a UI element (for now) is the `[optimizer_args.args.optimizer_args]` section, which you can add, delete, or change options for the optimizer, A proper UI for it will come later, once I figure out how I want to set it up.
 
 ## Changelog
-
-changelog of the old scripts are all in that branch [here](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/tree/old-scripts#changelog)
 
 - January 26, 2024
   - merged pr's [#150](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/150), [#156](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/156), [#157](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/157), [#159](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/159), [#164](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/164), and [#171](https://github.com/derrian-distro/LoRA_Easy_Training_Scripts/pull/171)
