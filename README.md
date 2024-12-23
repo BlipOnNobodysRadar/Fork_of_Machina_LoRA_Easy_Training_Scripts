@@ -72,9 +72,9 @@ git submodule update
 cd sd_scripts
 python3.10 -m venv venv //python3.10 and 3.11 both work
 source venv/bin/activate
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu124
 pip install -r requirements.txt
-pip install xformers
+pip install xformers --index-url https://download.pytorch.org/whl/cu124
 pip install -r ../requirements_ui.txt
 pip install ../LyCORIS/.
 pip install ../custom_scheduler/.
